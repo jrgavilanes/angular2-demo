@@ -1,0 +1,17 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+<a [routerLink]="['/heroes']" class="btn btn-outline-primary">Regresar</a>
+<br><br>
+<div class="card-columns">
+  <div class="card animated fadeIn fast">
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+      <h4 class="card-title">{{ heroe.nombre }} <small class="text-muted">{{ heroe.aparicion | date:"y"}}</small></h4>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p *ngIf="heroe.casa=='DC'"><img width="100px" src="assets/img/dc.jpeg" alt="DC"></p>
+      <p *ngIf="heroe.casa!='DC'"><img width="100px" src="assets/img/marvel.jpeg" alt="MARVEL"></p>   
+
+    </div>
+  </div>
+
+</div>
