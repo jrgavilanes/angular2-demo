@@ -13,11 +13,11 @@ export class HeroeComponent {
   constructor( private activatedRoute: ActivatedRoute,
                private heroeService: HeroesService) {
 
-    //console.log('lupas2');
+    // console.log('lupas2');
     this.activatedRoute.params.subscribe( params => {
-      //console.log(params['id']);
+      // console.log(params['id']);
 
-      //console.log(heroeService.getHeroe(params['id']));
+      // console.log(heroeService.getHeroe(params['id']));
       this.heroe = heroeService.getHeroe(params['id']);
 
     });

@@ -65,6 +65,18 @@ export class HeroesService {
   getHeroe(id: number): Heroe {
     return this.heroes[id];
   }
+
+  findHeroes(name: string): Heroe[] {
+    const result: Heroe[] = [];
+    name = name.toLowerCase().trim();
+    for (const heroe of this.heroes) {
+      if (heroe.nombre.toLowerCase().includes(name)) {
+        result.push(heroe);
+      }
+    }
+    return result;
+  }
+
 }
 
 export interface Heroe {
